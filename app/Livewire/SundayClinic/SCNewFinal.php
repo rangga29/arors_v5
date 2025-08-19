@@ -1,0 +1,57 @@
+<?php
+
+namespace App\Livewire\SundayClinic;
+
+use App\Models\NewAppointment;
+use App\Models\Schedule;
+use App\Models\ScheduleDate;
+use App\Models\ScheduleDetail;
+use Barryvdh\DomPDF\Facade\Pdf as PDF;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\View;
+use Livewire\Component;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+use function response;
+
+class SCNewFinal extends Component
+{
+    public $code, $appointmentData, $appointmentDetailData, $scheduleDetailData, $scheduleData, $scheduleDateData;
+
+    public function render()
+    {
+        View::share('type', 'sunday-clinic');
+        return view('livewire.new-sunday-clinic.nsc-final')
+            ->layout('frontend.layout', [
+                'subTitle' => 'Form Final Pasien Sunday Clinic',
+                'description' => 'Form Final Registrasi Online Rumah Sakit Cahya Kawaluyan untuk Pasien Sunday Clinic',
+                'subKeywords' => 'form pasien klinik mingguan, form pasien, pasien klinik mingguan'
+            ]);
+    }
+
+    public function mount($code): void
+    {
+        $this->appointmentData = \App\Models\Appointment::where('ap_ucode', $code)->first();
+        $this->appointmentDetailData = NewAppointment::where('ap_id', $this->appointmentData['id'])->first();
+        $this->scheduleDetailData = ScheduleDetail::where('id', $this->appointmentData['scd_id'])->first();
+        $this->scheduleData = Schedule::where('id', $this->scheduleDetailData['sc_id'])->first();
+        $this->scheduleDateData = ScheduleDate::where('id', $this->scheduleData['sd_id'])->first();
+    }
+
+    public function downloadPdf(): StreamedResponse
+    {
+        $fileName = Carbon::createFromFormat('Y-m-d', $this->scheduleDateData['sd_date'])->format('Ymd') . '_' . $this->appointmentDetailData['nap_ssn'] . '_BuktiRegolSundayClinicPasienBaruRSCK';
+        $data = [
+            'title' => $fileName,
+            'appointmentData' => $this->appointmentData,
+            'appointmentDetailData' => $this->appointmentDetailData,
+            'scheduleDetailData' => $this->scheduleDetailData,
+            'scheduleData' => $this->scheduleData,
+            'scheduleDateData' => $this->scheduleDateData,
+        ];
+
+        $pdf = PDF::loadView('frontend.nsc-print', $data);
+        return response()->streamDownload(function () use ($pdf) {
+            echo $pdf->output();
+        }, $fileName . '.pdf');
+    }
+}

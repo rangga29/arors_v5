@@ -1,0 +1,167 @@
+.bg-home {
+    background-image: url('../../../../public/images/bg_rsck_2023.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.1);;
+        z-index: -1;
+    }
+
+    &.bg-umum {
+        background-image: url('../../../../public/images/bg_umum_2024.jpg');
+    }
+
+    &.bg-bpjs {
+        background-image: url('../../../../public/images/bg_bpjs_2024.jpg');
+    }
+
+    &.bg-rehab-medik {
+        background-image: url('../../../../public/images/bg_rehab_2025.jpg');
+    }
+
+    &.bg-fisioterapi {
+        background-image: url('../../../../public/images/bg_fisio_2024.jpg');
+    }
+
+    h1, h2, .text-body-emphasis {
+        color: #ffffff !important;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);;
+        font-weight: 600;
+    }
+
+    p, .text-detail {
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);;
+        color: #d9d9d9;
+    }
+
+    .btn-primary {
+        background-color: #1abc9c;
+        border-color: darken(#1abc9c, 5%);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);;
+    }
+
+    .btn-secondary {
+        background-color: #3498db;
+        border-color: darken(#3498db, 5%);
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);;
+    }
+
+    svg, .icon {
+        fill: #34495e;
+    }
+
+    .btn-primary {
+        background-color: #1abc9c;
+        border-color: darken(#1abc9c, 5%);
+    }
+
+    .btn-secondary {
+        background-color: #16a085;
+        border-color: darken(#16a085, 5%);
+    }
+
+    .btn-tertiary {
+        background-color: #2ecc71;
+        border-color: darken(#2ecc71, 5%);
+    }
+
+    .btn-quaternary {
+        background-color: #27ae60;
+        border-color: darken(#27ae60, 5%);
+    }
+
+    .btn-danger {
+        background-color: #FF0000;
+        border-color: darken(#FF0000, 5%);
+    }
+
+    .btn-info {
+        background-color: #00FFFF;
+        border-color: darken(#00FFFF, 5%);
+    }
+
+    .btn-success {
+        background-color: #00FF00;
+        border-color: darken(#00FF00, 5%);
+    }
+
+    .btn-warning {
+        background-color: #FFD700;
+        border-color: darken(#FFD700, 5%);
+    }
+
+    .btn-one {
+        background-color: #ff7c18;
+        border-color: darken(#ff7c18, 5%);
+    }
+
+    .btn-two {
+        background-color: #60ec60;
+        border-color: darken(#60ec60, 5%);
+    }
+
+    .btn-three {
+        background-color: #117EB8;
+        border-color: darken(#117EB8, 5%);
+    }
+
+    .btn-four {
+        background-color: #614def;
+        border-color: darken(#614def, 5%);
+    }
+
+    .btn-five {
+        background-color: #51d7f8;
+        border-color: darken(#51d7f8, 5%);
+    }
+
+    .btn-six {
+        background-color: #1a809a;
+        border-color: darken(#1a809a, 5%);
+    }
+
+    .btn-seven {
+        background-color: #1a809a;
+        border-color: darken(#1a809a, 5%);
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-home-btn {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo-image {
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        max-width: 200px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .custom-home-btn {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo-image {
+        max-width: 300px;
+    }
+}

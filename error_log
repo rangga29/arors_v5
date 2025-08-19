@@ -1,0 +1,2 @@
+[21-Jun-2024 14:10:34 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 7.4.33. in /home/regrsck/arors_v2/vendor/composer/platform_check.php on line 24
+[08-May-2025 14:05:08 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.2.0". You are running 7.4.33. in /home/regrsck/arors_v5/vendor/composer/platform_check.php on line 24
