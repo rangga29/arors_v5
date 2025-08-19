@@ -34,7 +34,14 @@
 
     @if (session()->has('error2'))
         <div class="alert alert-danger">
-            <span class="fs-4">{{ session('error2') }}</span>
+            <span class="fs-4">{{ session('error2') }} | Bukti Pendaftaran Dapat Klik
+                {{-- Dynamically generate the correct route link --}}
+                @if(session('serviceType') == 'umum')
+                    <a href="{{ route('umum.final', session('error3')) }}">DISINI</a>
+                @else
+                    <a href="{{ route('asuransi.final', session('error3')) }}">DISINI</a>
+                @endif
+            </span>
         </div>
     @endif
 

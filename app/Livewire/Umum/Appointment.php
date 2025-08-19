@@ -92,10 +92,10 @@ class Appointment extends Component
                     $this->businessPartners = $sortedBusinessPartners;
                 }
             } else {
-                return back()->with('error', 'Request failed. Status code: ' . $response->getStatusCode());
+                return back()->with('error1', 'Request failed. Status code: ' . $response->getStatusCode());
             }
         } catch (RequestException $e) {
-            return back()->with('error', 'An error occurred: ' . $e->getMessage());
+            return back()->with('error1', 'An error occurred: ' . $e->getMessage());
         }
     }
 
@@ -182,12 +182,12 @@ class Appointment extends Component
         $scheduleDate = Carbon::createFromFormat('Y-m-d', $scheduleDateOldFormat)->format('Ymd');
 
         if($scheduleData['sc_available'] == 0 || $scheduleDetailData['scd_available'] == 0) {
-            return redirect()->route('umum')->with('error', 'Mohon Maaf Jadwal [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Tidak Tersedia');
+            return redirect()->route('umum')->with('error1', 'Mohon Maaf Jadwal [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Tidak Tersedia');
         }
 
         if($scheduleDetailData['scd_counter_online_umum'] === $scheduleDetailData['scd_online_umum']) {
             if($scheduleDetailData['scd_counter_online_bpjs'] === $scheduleDetailData['scd_online_bpjs']) {
-                return redirect()->route('umum')->with('error', 'Mohon Maaf Kuota Online Pasien Umum / Asuransi [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Sudah Penuh. Silahkan Datang Langsung Ke Rumah Sakit Untuk Registrasi Langsung.');
+                return redirect()->route('umum')->with('error1', 'Mohon Maaf Kuota Online Pasien Umum / Asuransi [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Sudah Penuh. Silahkan Datang Langsung Ke Rumah Sakit Untuk Registrasi Langsung.');
             }
         }
 
@@ -240,10 +240,10 @@ class Appointment extends Component
                         }
                     }
                 } else {
-                    return redirect()->route('umum')->with('error', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [' . $response->getStatusCode() . ']');
+                    return redirect()->route('umum')->with('error1', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [' . $response->getStatusCode() . ']');
                 }
             } catch (RequestException $e) {
-                return redirect()->route('umum')->with('error', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [500]');
+                return redirect()->route('umum')->with('error1', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [500]');
             }
 
             $requestData = [
@@ -353,51 +353,73 @@ class Appointment extends Component
                         return redirect()->route('asuransi.final', $dataField['AppointmentID'])->with('success', 'Registrasi Berhasil Dilakukan');
                     }
                 } else {
-                    if($data['Status'] == 'FAILED (102)') {
-                        $requestData = [
-                            'HealthcareID' => '001',
-                            'DepartmentID' => 'OUTPATIENT',
-                            'AppointmentMethod' => '003',
-                            'MedicalNo' => $this->patientData['MedicalNo'],
-                            'ServiceUnitCode' => $scheduleData['sc_clinic_code'],
-                            'ParamedicCode' => $scheduleData['sc_doctor_code'],
-                            'VisitTypeCode' => 'VT01',
-                            'OperationalTimeCode' => $scheduleData['sc_operational_time_code'],
-                            'StartDate' => $scheduleDate,
-                            'Session' => $scheduleDetailData->scd_session,
-                            'Notes' => '',
-                            'IsPersonalPayer' => 1,
-                            'BusinessPartnerCode' => 'PERSONAL',
-                            'IsBPJS' => 0,
-                            'IsNewPatient' => 0,
-                            'UserID' => '197317247'
-                        ];
+                    if ($data['Status'] == 'FAILED (102)') {
                         $date = $scheduleDateOldFormat;
-                        if($this->serviceType == 'umum') {
-                            $umumAppointmentExists = UmumAppointment::with('appointment.scheduleDetail.schedule.scheduleDate')
+                        $existingAppointment = null; // Inisialisasi variabel agar tidak error
+
+                        // Langkah 1: Cari data janji temu yang sudah ada berdasarkan jenis layanan
+                        if ($this->serviceType == 'umum') {
+                            $existingAppointment = UmumAppointment::with('appointment.scheduleDetail.schedule.scheduleDate')
                                 ->where('uap_norm', $this->patientData['MedicalNo'])
                                 ->whereDate('uap_birthday', $this->patientData['DateOfBirth'])
                                 ->whereHas('appointment.scheduleDetail.schedule.scheduleDate', function ($query) use ($date) {
-                                    $query->where('sd_date', $date);
+                                    $query->where('sd_date', 'like', $date);
                                 })
-                                ->whereHas('appointment.scheduleDetail.schedule', function ($query) use ($scheduleData['sc_clinic_code') {
-                                    $query->where('sc_clinic_code', $scheduleData['sc_clinic_code'])->where('sc_doctor_code', $scheduleData['sc_doctor_code'])->where('scd_session', $scheduleDetailData->scd_session);
+                                ->whereHas('appointment.scheduleDetail.schedule', function ($query) use ($scheduleData) {
+                                    $query->where('sc_clinic_code', $scheduleData['sc_clinic_code'])
+                                        ->where('sc_doctor_code', $scheduleData['sc_doctor_code']);
                                 })
-                                ->get();
-                            dd($umumAppointmentExists, $date, $this->selectedClinic, $this->selectedDoctor, $this->selectedSession);
+                                ->whereHas('appointment.scheduleDetail', function ($query) use ($scheduleDetailData) {
+                                    $query->where('scd_session', $scheduleDetailData->scd_session);
+                                })
+                                ->first();
                         } else {
-
+                            $existingAppointment = AsuransiAppointment::with('appointment.scheduleDetail.schedule.scheduleDate')
+                                ->where('aap_norm', $this->patientData['MedicalNo'])
+                                ->whereDate('aap_birthday', $this->patientData['DateOfBirth'])
+                                ->whereHas('appointment.scheduleDetail.schedule.scheduleDate', function ($query) use ($date) {
+                                    $query->where('sd_date', 'like', $date);
+                                })
+                                ->whereHas('appointment.scheduleDetail.schedule', function ($query) use ($scheduleData) {
+                                    $query->where('sc_clinic_code', $scheduleData['sc_clinic_code'])
+                                        ->where('sc_doctor_code', $scheduleData['sc_doctor_code']);
+                                })
+                                ->whereHas('appointment.scheduleDetail', function ($query) use ($scheduleDetailData) {
+                                    $query->where('scd_session', $scheduleDetailData->scd_session);
+                                })
+                                ->first();
                         }
-                        return redirect()->route('umum')->with('error1', $data['Remarks']);
+
+                        // Langkah 2: Buat pesan dan redirect jika data ditemukan
+                        if ($existingAppointment) {
+                            $queueNo = $existingAppointment->appointment->ap_queue;
+                            $doctorName = $existingAppointment->appointment->scheduleDetail->schedule->sc_doctor_name;
+                            $clinicName = $existingAppointment->appointment->scheduleDetail->schedule->sc_clinic_name;
+                            $appointmentDate = \Carbon\Carbon::parse($existingAppointment->appointment->scheduleDetail->schedule->scheduleDate->sd_date)->isoFormat('D MMMM YYYY');
+                            $appointmentUcode = $existingAppointment->appointment->ap_ucode;
+
+                            $error2_message = "No Antrian {$queueNo} | Dokter {$doctorName} | Klinik {$clinicName} | Tanggal {$appointmentDate}";
+
+                            // Redirect ke route yang sesuai ('umum' atau 'asuransi') dengan membawa semua data
+                            return redirect()->route('umum')
+                                ->with('error1', $data['Remarks'])
+                                ->with('error2', $error2_message)
+                                ->with('error3', $appointmentUcode)
+                                ->with('serviceType', $this->serviceType); // Kirim jenis layanan untuk view
+                        } else {
+                            // Fallback jika status FAILED 102 tapi data tidak ditemukan, redirect hanya dengan pesan utama
+                            return redirect()->route('umum')->with('error1', $data['Remarks']);
+                        }
                     } else {
+                        // Untuk status FAILED lainnya (selain 102)
                         return redirect()->route('umum')->with('error1', $data['Remarks']);
                     }
                 }
             } else {
-                return redirect()->route('umum')->with('error', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [' . $response->getStatusCode() . ']');
+                return redirect()->route('umum')->with('error1', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [' . $response->getStatusCode() . ']');
             }
         } catch (RequestException $e) {
-            return redirect()->route('umum')->with('error', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [500]');
+            return redirect()->route('umum')->with('error1', 'Mohon Maaf Terjadi Kesalahan Pada Sistem. Silahkan Menghubungi Customer Service di 0812 1111 8009. Terima Kasih. [500]');
         }
     }
 }
