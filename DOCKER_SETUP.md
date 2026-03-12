@@ -33,11 +33,12 @@ Buka **http://localhost:8080** → App siap digunakan!
 
 ## Akses
 
-| Service       | URL                     |
-|---------------|-------------------------|
-| App (Apache)  | http://localhost:8080    |
-| Vite HMR      | http://localhost:5173    |
-| MySQL         | localhost:3306           |
+| Service               | URL                     |
+|-----------------------|-------------------------|
+| App (Apache)          | http://localhost:8080    |
+| Vite HMR (ARORS)      | http://localhost:5173    |
+| APM Rehab Kiosk       | http://localhost:5174    |
+| MySQL                 | localhost:3306           |
 
 ## Workflow Sehari-hari
 
