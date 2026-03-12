@@ -343,8 +343,9 @@
     "src": "node_modules/jquery.rateit/scripts/jquery.rateit.min.js"
   },
   "node_modules/jquery/dist/jquery.js?commonjs-entry": {
-    "file": "assets/jquery-6a93a756.js",
+    "file": "assets/jquery-c20c3ece.js",
     "imports": [
+      "_jquery-85b43b21.js",
       "__commonjsHelpers-de833af9.js"
     ],
     "isEntry": true,
@@ -435,10 +436,11 @@
     "src": "resources/fonts/remixicon.woff2"
   },
   "resources/js/app.js": {
-    "file": "assets/app-5e4d9ff4.js",
+    "file": "assets/app-68e85ab2.js",
     "imports": [
       "__commonjsHelpers-de833af9.js",
-      "_jquery-85b43b21.js"
+      "_jquery-85b43b21.js",
+      "node_modules/jquery-mask-plugin/dist/jquery.mask.min.js?commonjs-entry"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
