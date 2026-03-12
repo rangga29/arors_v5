@@ -39,16 +39,12 @@ Setelah selesai, **restart PC**. Saat pertama kali buka Ubuntu, buat username & 
 1. Download dari: https://git-scm.com/
 2. Install dengan default settings
 
-### 1.5 Install VS Code + Antigravity
+### 1.5 Install Antigravity IDE
 
-1. Download VS Code dari: https://code.visualstudio.com/
+1. Download Antigravity IDE dari: https://www.antigravity.dev/
 2. Install dengan default settings
-3. Buka VS Code → Extensions (Ctrl+Shift+X)
-4. Cari dan install **Antigravity** extension
-5. Login/setup Antigravity sesuai instruksi
-
-> **Tips:** Aktifkan **Settings Sync** di VS Code (ikon akun kiri bawah → Turn on Settings Sync → login GitHub).
-> Ini akan otomatis sync extensions, settings, dan keybindings antar device!
+3. Login/setup Antigravity sesuai instruksi
+4. Buka folder project WSL: `\\wsl.localhost\Ubuntu\home\rangg\projects`
 
 ---
 
