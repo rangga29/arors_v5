@@ -242,7 +242,7 @@ class RMPatientCheck extends Component
 
         if ($scheduleDetailData['scd_counter_online_umum'] === $scheduleDetailData['scd_online_umum']) {
             if ($scheduleDetailData['scd_counter_online_bpjs'] === $scheduleDetailData['scd_online_bpjs']) {
-                return redirect()->route('rehab-medik')->with('error', 'Mohon Maaf Kuota Online Pasien Rehabilitasi Medik [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Sudah Penuh. Silahkan Datang Langsung Ke Rumah Sakit Untuk Registrasi Langsung.');
+                return redirect()->route('rehab-medik')->with('error', 'Mohon Maaf Kuota Online Pasien Rehabilitasi Medik [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Sudah Penuh. Untuk Informasi Kuota Silahkan Menghubungi Customer Service di Nomor WhatsApp <b>0812 1111 8009</b>.');
             }
         }
 
@@ -452,7 +452,7 @@ class RMPatientCheck extends Component
 
         if ($scheduleDetailData['scd_counter_online_umum'] === $scheduleDetailData['scd_online_umum']) {
             if ($scheduleDetailData['scd_counter_online_bpjs'] === $scheduleDetailData['scd_online_bpjs']) {
-                return redirect()->route('rehab-medik')->with('error', 'Mohon Maaf Kuota Online Pasien Rehabilitasi Medik [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Sudah Penuh. Silahkan Datang Langsung Ke Rumah Sakit Untuk Registrasi Langsung.');
+                return redirect()->route('rehab-medik')->with('error', 'Mohon Maaf Kuota Online Pasien Rehabilitasi Medik [' . $scheduleData['sc_clinic_name'] . ' -- ' . $scheduleData['sc_doctor_name'] . '] Sudah Penuh. Untuk Informasi Kuota Silahkan Menghubungi Customer Service di Nomor WhatsApp <b>0812 1111 8009</b>.');
             }
         }
 
