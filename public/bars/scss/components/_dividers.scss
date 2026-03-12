@@ -1,0 +1,52 @@
+$dividerColor: rgba(0,0,0,0.05);
+$dividerIconColor: rgba(0,0,0,0.2);
+$dividerIconColorDark: rgba(255,255,255,0.2);
+$dividerIconBackground: #FFFFFF;
+
+/*Dividers*/
+.divider {
+	height: 1px;
+	display: block;
+	background-color: $dividerColor;
+	margin-bottom: $globalMargin;
+}
+.divider-margins {
+	margin: 0px 17px $globalMargin 17px;
+}
+.divider-icon {
+	height: 1px;
+	display: block;
+    height: 1px;
+    background-color: $dividerIconColor;
+    margin: 0 auto;
+    width:100%;
+    background-image: linear-gradient(left , white 2%, #E6E6E6 50%, white 98%);
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, white), color-stop(0.5, $dividerIconColor), color-stop(0.98, white) );
+	margin-bottom: 50px;
+	i {
+		position: absolute;
+		width: 50px;
+		background-color: $dividerIconBackground;
+		text-align: center;
+		margin-top: -13px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+.theme-dark .divider-icon{
+    background-image: linear-gradient(left , white 2%, #c3c3c3 50%, white 98%)!important;
+    background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, rgba(255,255,255,0.02)), color-stop(0.5, $dividerIconColorDark), color-stop(0.98, rgba(255,255,255,0.02)) );   
+}
+
+.card {
+	.divider-icon {
+		i {
+			background-color: $color-white;
+		}
+	}
+}
+.divider-small {
+	height: 2px;
+	width: 80px;
+	margin: auto;
+}

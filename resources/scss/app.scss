@@ -1,0 +1,375 @@
+// Fig Tree fonts
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&display=swap');
+
+//Core files
+@import "/node_modules/bootstrap/scss/functions";
+@import "/node_modules/bootstrap/scss/variables";
+
+@import "config/variables";
+@import "config/variables-custom";
+@import "config/variables-dark";
+@import "config/theme-mode"; // Lght/Dark Mode
+@import "custom/components/utilities";
+@import "/node_modules/bootstrap/scss/bootstrap";
+
+
+// Structure
+@import "custom/structure/sidenav";
+@import "custom/structure/topbar";
+@import "custom/structure/right-sidebar";
+@import "custom/structure/page-head";
+@import "custom/structure/footer";
+// Horizontal nav
+@import "custom/structure/horizontal-nav";
+
+// Components
+@import "custom/components/root";
+@import "custom/components/accordions";
+@import "custom/components/alert";
+@import "custom/components/avatar";
+@import "custom/components/breadcrumb";
+@import "custom/components/buttons";
+@import "custom/components/badge";
+@import "custom/components/card";
+@import "custom/components/custom-forms";
+@import "custom/components/dropdown";
+@import "custom/components/forms";
+@import "custom/components/modal";
+@import "custom/components/nav";
+@import "custom/components/pagination";
+@import "custom/components/popover";
+@import "custom/components/print";
+@import "custom/components/progress";
+@import "custom/components/reboot";
+@import "custom/components/tables";
+@import "custom/components/type";
+@import "custom/components/tooltip";
+@import "custom/components/widgets";
+@import "custom/components/social";
+@import "custom/components/steps";
+@import "custom/components/preloader";
+
+//Pages
+@import "custom/pages/authentication";
+@import "custom/pages/components-demo";
+@import "custom/pages/error";
+@import "custom/pages/faq";
+@import "custom/pages/maintenance";
+@import "custom/pages/tasks";
+@import "custom/pages/email";
+@import "custom/pages/timeline";
+@import "custom/pages/home";
+@import "custom/pages/registration";
+
+// Plugins
+@import "custom/plugins/apexcharts";
+@import "custom/plugins/calendar";
+@import "custom/plugins/chartjs";
+@import "custom/plugins/datatable";
+@import "custom/plugins/daterange";
+@import "custom/plugins/datepicker";
+@import "custom/plugins/flatpickr";
+@import "custom/plugins/dragula";
+@import "custom/plugins/dropzone";
+@import "custom/plugins/form-wizard";
+@import "custom/plugins/maps";
+@import "custom/plugins/quill-editor";
+@import "custom/plugins/select2";
+@import "custom/plugins/simplebar";
+@import "custom/plugins/toaster";
+@import "custom/plugins/bootstrap-touchspin";
+@import "custom/plugins/bootstrap-timepicker";
+@import "custom/plugins/typehead";
+@import "custom/plugins/sparklines";
+@import "custom/plugins/timepicker";
+@import "custom/plugins/rateit";
+@import "custom/plugins/ion-rangeslider";
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); // Semi-transparent white
+    backdrop-filter: blur(5px); // Blur effect
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; // Ensure it's above the modal content
+
+    .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .spinner-border {
+            // Your spinner styles
+        }
+    }
+}
+
+#overlay-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Semi-transparent white background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* Ensure it appears above other elements */
+
+    .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .spinner-border {
+            // Your spinner styles
+        }
+    }
+}
+
+.background {
+    position: relative;
+    z-index: 1;
+    //background-color: rgba(0, 0, 0, 0.3);
+    padding: 2em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .form-label {
+        color: white;
+    }
+}
+
+// Receipt card styles for Bukti Pendaftaran pages
+.receipt-card {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+
+    .receipt-header {
+        text-align: center;
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+
+        img {
+            height: 50px;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 2px 6px rgba(255, 255, 255, 0.5));
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+
+        .receipt-subtitle {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(13, 110, 253, 0.6);
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+        }
+    }
+
+    .data-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 0.875rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .data-label {
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.75);
+            flex-shrink: 0;
+            min-width: 40%;
+        }
+
+        .data-value {
+            text-align: right;
+            color: #fff;
+            font-weight: 500;
+            word-break: break-word;
+        }
+    }
+
+    .receipt-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+        color: #fff;
+        padding: 0.25rem 0.75rem;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    .receipt-qr {
+        text-align: center;
+        padding: 0.75rem 0;
+
+        img,
+        svg {
+            max-width: 150px;
+            height: auto;
+        }
+    }
+
+    .receipt-notes {
+        background: rgba(255, 248, 225, 0.15);
+        border: 1px solid rgba(255, 193, 7, 0.3);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        margin-top: 0.75rem;
+
+        p {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0.35rem;
+            line-height: 1.4;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .receipt-alert {
+        background: rgba(255, 243, 205, 0.2);
+        border: 1px solid rgba(255, 193, 7, 0.5);
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
+
+        .alert-title {
+            font-weight: 700;
+            color: #ffc107;
+            font-size: 0.9rem;
+        }
+
+        .alert-body {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+        }
+    }
+
+    .receipt-actions {
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+
+        .btn {
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+            border: none;
+            box-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+
+            &:hover {
+                box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+                transform: translateY(-1px);
+            }
+        }
+
+        .btn-outline-danger {
+            border: 2px solid #dc3545;
+            color: #dc3545;
+            background: transparent;
+
+            &:hover {
+                background: #dc3545;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .background {
+        padding: 1em 0.75em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .receipt-card {
+        padding: 1rem;
+        border-radius: 12px;
+
+        .receipt-header h2 {
+            font-size: 1rem;
+        }
+
+        .data-row {
+            flex-direction: column;
+            gap: 0.1rem;
+
+            .data-label {
+                min-width: 100%;
+                font-size: 0.78rem;
+            }
+
+            .data-value {
+                text-align: left;
+                padding-left: 0.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
+
+.form-date {
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    position: relative;
+    width: 100%;
+
+    &:before {
+        content: attr(data-date);
+    }
+
+    &::-webkit-datetime-edit,
+    &::-webkit-inner-spin-button,
+    &::-webkit-clear-button {
+        display: none;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+        background: transparent;
+        bottom: 0;
+        color: transparent;
+        cursor: pointer;
+        height: auto;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+}

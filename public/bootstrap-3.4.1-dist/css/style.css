@@ -1,0 +1,90 @@
+/* Default Styles (Desktop and Large Screens) */
+.background {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .form-label, .form-note {
+        color: white;
+    }
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.logo-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo-text {
+    font-weight: normal;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.optgroup-custom {
+    background-color: #c5c2c2; /* Light gray background */
+    color: #333;                /* Darker text color for contrast */
+    padding: 5px;               /* Add some padding for visual separation */
+}
+
+.optgroup-custom option {
+    background-color: #fff;     /* White background for options */
+}
+
+.optgroup-custom option:hover {
+    background-color: #e9ecef; /* Hover effect */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 767px) { /* For tablets and smaller */
+    .background {
+        padding: 1em; /* Reduce padding */
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .logo-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .logo-title {
+        font-size: 24px; /* Reduce font size */
+    }
+
+    .logo-text {
+        font-size: 14px; /* Reduce font size */
+    }
+}
+
+@media (max-width: 480px) { /* For phones and smaller */
+    .background {
+        padding: 1em; /* Further reduce padding */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .logo-container {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .logo-title {
+        font-size: 20px; /* Reduce font size further */
+    }
+
+    .logo-text {
+        font-size: 12px; /* Reduce font size further */
+    }
+}

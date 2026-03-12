@@ -1,0 +1,540 @@
+{
+  "__commonjs-dynamic-modules-302442b1.js": {
+    "file": "assets/_commonjs-dynamic-modules-302442b1.js"
+  },
+  "__commonjsHelpers-de833af9.js": {
+    "file": "assets/_commonjsHelpers-de833af9.js"
+  },
+  "_dataTables.bootstrap5-31b0ec69.js": {
+    "file": "assets/dataTables.bootstrap5-31b0ec69.js",
+    "imports": [
+      "_jquery-30b01ada.js",
+      "_jquery.dataTables-dba82043.js"
+    ]
+  },
+  "_dataTables.bootstrap5-46f65801.js": {
+    "file": "assets/dataTables.bootstrap5-46f65801.js",
+    "imports": [
+      "_dataTables.bootstrap5-31b0ec69.js",
+      "__commonjsHelpers-de833af9.js"
+    ]
+  },
+  "_dataTables.buttons-cc3d7f2a.js": {
+    "file": "assets/dataTables.buttons-cc3d7f2a.js",
+    "imports": [
+      "_jquery-30b01ada.js",
+      "_jquery.dataTables-dba82043.js",
+      "__commonjsHelpers-de833af9.js"
+    ]
+  },
+  "_id-be976a3c.js": {
+    "file": "assets/id-be976a3c.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js"
+    ]
+  },
+  "_jquery-30b01ada.js": {
+    "file": "assets/jquery-30b01ada.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ]
+  },
+  "_jquery-85b43b21.js": {
+    "file": "assets/jquery-85b43b21.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js"
+    ]
+  },
+  "_jquery.dataTables-8fed63aa.js": {
+    "file": "assets/jquery.dataTables-8fed63aa.js",
+    "imports": [
+      "_jquery.dataTables-dba82043.js",
+      "__commonjsHelpers-de833af9.js"
+    ]
+  },
+  "_jquery.dataTables-dba82043.js": {
+    "file": "assets/jquery.dataTables-dba82043.js",
+    "imports": [
+      "_jquery-30b01ada.js"
+    ]
+  },
+  "node_modules/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css": {
+    "file": "assets/jquery-jvectormap-1.2.2-d1ab5667.css",
+    "isEntry": true,
+    "src": "node_modules/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css"
+  },
+  "node_modules/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js": {
+    "file": "assets/jquery-jvectormap-1.2.2.min-6500bd1b.js",
+    "isEntry": true,
+    "src": "node_modules/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"
+  },
+  "node_modules/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js": {
+    "file": "assets/jquery-jvectormap-world-mill-en-900da6a3.js",
+    "isEntry": true,
+    "src": "node_modules/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js"
+  },
+  "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css": {
+    "file": "assets/bootstrap-datepicker.min-f07219c4.css",
+    "isEntry": true,
+    "src": "node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"
+  },
+  "node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css": {
+    "file": "assets/bootstrap-timepicker.min-9ecbe5fb.css",
+    "isEntry": true,
+    "src": "node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css"
+  },
+  "node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js": {
+    "file": "assets/bootstrap-timepicker.min-9ae77163.js",
+    "isEntry": true,
+    "src": "node_modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"
+  },
+  "node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css": {
+    "file": "assets/jquery.bootstrap-touchspin-d1613624.css",
+    "isEntry": true,
+    "src": "node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css"
+  },
+  "node_modules/cleave.js/dist/cleave.js?commonjs-entry": {
+    "file": "assets/cleave-4e66290e.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/cleave.js/dist/cleave.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css": {
+    "file": "assets/dataTables.bootstrap5.min-2f07e343.css",
+    "isEntry": true,
+    "src": "node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css"
+  },
+  "node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js?commonjs-entry": {
+    "file": "assets/dataTables.bootstrap5.min-52a0fe39.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-bs5/js/dataTables.bootstrap5.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css": {
+    "file": "assets/buttons.bootstrap5.min-979974bf.css",
+    "isEntry": true,
+    "src": "node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css"
+  },
+  "node_modules/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js?commonjs-entry": {
+    "file": "assets/buttons.bootstrap5.min-f4ab4f7f.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "_dataTables.bootstrap5-46f65801.js",
+      "_dataTables.buttons-cc3d7f2a.js",
+      "__commonjsHelpers-de833af9.js",
+      "_dataTables.bootstrap5-31b0ec69.js",
+      "_jquery-30b01ada.js",
+      "_jquery.dataTables-dba82043.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-buttons/js/buttons.flash.min.js?commonjs-entry": {
+    "file": "assets/buttons.flash.min-73fe52ca.js",
+    "imports": [
+      "_jquery.dataTables-8fed63aa.js",
+      "_dataTables.buttons-cc3d7f2a.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-buttons/js/buttons.flash.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-buttons/js/buttons.html5.min.js?commonjs-entry": {
+    "file": "assets/buttons.html5.min-1c50d9b8.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "_dataTables.buttons-cc3d7f2a.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-buttons/js/buttons.html5.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-buttons/js/buttons.print.min.js?commonjs-entry": {
+    "file": "assets/buttons.print.min-1c415fe2.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "_dataTables.buttons-cc3d7f2a.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-buttons/js/buttons.print.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-buttons/js/dataTables.buttons.min.js?commonjs-entry": {
+    "file": "assets/dataTables.buttons.min-aeb69e0a.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-buttons/js/dataTables.buttons.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css": {
+    "file": "assets/fixedColumns.bootstrap5.min-75ecf396.css",
+    "isEntry": true,
+    "src": "node_modules/datatables.net-fixedcolumns-bs5/css/fixedColumns.bootstrap5.min.css"
+  },
+  "node_modules/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css": {
+    "file": "assets/fixedHeader.bootstrap5.min-08594280.css",
+    "isEntry": true,
+    "src": "node_modules/datatables.net-fixedheader-bs5/css/fixedHeader.bootstrap5.min.css"
+  },
+  "node_modules/datatables.net-keytable/js/dataTables.keyTable.min.js?commonjs-entry": {
+    "file": "assets/dataTables.keyTable.min-144aedb6.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-keytable/js/dataTables.keyTable.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css": {
+    "file": "assets/responsive.bootstrap5.min-d38ebaef.css",
+    "isEntry": true,
+    "src": "node_modules/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css"
+  },
+  "node_modules/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js?commonjs-entry": {
+    "file": "assets/responsive.bootstrap5.min-d541f60d.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "_dataTables.bootstrap5-46f65801.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "_dataTables.bootstrap5-31b0ec69.js",
+      "_jquery-30b01ada.js",
+      "_jquery-85b43b21.js",
+      "_jquery.dataTables-dba82043.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-responsive/js/dataTables.responsive.min.js?commonjs-entry": {
+    "file": "assets/dataTables.responsive.min-8ca6e3e5.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-responsive/js/dataTables.responsive.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net-select-bs5/css/select.bootstrap5.min.css": {
+    "file": "assets/select.bootstrap5.min-dedbf7bf.css",
+    "isEntry": true,
+    "src": "node_modules/datatables.net-select-bs5/css/select.bootstrap5.min.css"
+  },
+  "node_modules/datatables.net-select/js/dataTables.select.min.js?commonjs-entry": {
+    "file": "assets/dataTables.select.min-48114478.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "_jquery.dataTables-8fed63aa.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net-select/js/dataTables.select.min.js?commonjs-entry"
+  },
+  "node_modules/datatables.net/js/jquery.dataTables.min.js?commonjs-entry": {
+    "file": "assets/jquery.dataTables.min-1bbd8709.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "__commonjsHelpers-de833af9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/datatables.net/js/jquery.dataTables.min.js?commonjs-entry"
+  },
+  "node_modules/daterangepicker/daterangepicker.css": {
+    "file": "assets/daterangepicker-60f595b9.css",
+    "isEntry": true,
+    "src": "node_modules/daterangepicker/daterangepicker.css"
+  },
+  "node_modules/daterangepicker/moment.min.js?commonjs-entry": {
+    "file": "assets/moment.min-c3f24946.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "__commonjs-dynamic-modules-302442b1.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/daterangepicker/moment.min.js?commonjs-entry"
+  },
+  "node_modules/dragula/dist/dragula.min.js?commonjs-entry": {
+    "file": "assets/dragula.min-dc995334.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "__commonjs-dynamic-modules-302442b1.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/dragula/dist/dragula.min.js?commonjs-entry"
+  },
+  "node_modules/flatpickr/dist/flatpickr.min.css": {
+    "file": "assets/flatpickr.min-21fdfc57.css",
+    "isEntry": true,
+    "src": "node_modules/flatpickr/dist/flatpickr.min.css"
+  },
+  "node_modules/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js?commonjs-entry": {
+    "file": "assets/dataTables.checkboxes.min-d7ec7a4e.js",
+    "imports": [
+      "_jquery.dataTables-8fed63aa.js",
+      "_jquery.dataTables-dba82043.js",
+      "_jquery-30b01ada.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js?commonjs-entry"
+  },
+  "node_modules/jquery-mask-plugin/dist/jquery.mask.min.js?commonjs-entry": {
+    "file": "assets/jquery.mask.min-704060ef.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/jquery-mask-plugin/dist/jquery.mask.min.js?commonjs-entry"
+  },
+  "node_modules/jquery-toast-plugin/dist/jquery.toast.min.css": {
+    "file": "assets/jquery.toast.min-a8ab1bcc.css",
+    "isEntry": true,
+    "src": "node_modules/jquery-toast-plugin/dist/jquery.toast.min.css"
+  },
+  "node_modules/jquery-toast-plugin/dist/jquery.toast.min.js": {
+    "file": "assets/jquery.toast.min-97d48b7b.js",
+    "isEntry": true,
+    "src": "node_modules/jquery-toast-plugin/dist/jquery.toast.min.js"
+  },
+  "node_modules/jquery-toast-plugin/src/jquery.toast.js": {
+    "file": "assets/jquery.toast-d21f8d45.js",
+    "isEntry": true,
+    "src": "node_modules/jquery-toast-plugin/src/jquery.toast.js"
+  },
+  "node_modules/jquery.rateit/scripts/jquery.rateit.js": {
+    "file": "assets/jquery.rateit-0cd64222.js",
+    "isEntry": true,
+    "src": "node_modules/jquery.rateit/scripts/jquery.rateit.js"
+  },
+  "node_modules/jquery.rateit/scripts/jquery.rateit.min.js": {
+    "file": "assets/jquery.rateit.min-42a5ef08.js",
+    "isEntry": true,
+    "src": "node_modules/jquery.rateit/scripts/jquery.rateit.min.js"
+  },
+  "node_modules/jquery/dist/jquery.js?commonjs-entry": {
+    "file": "assets/jquery-6a93a756.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/jquery/dist/jquery.js?commonjs-entry"
+  },
+  "node_modules/quill/dist/quill.bubble.css": {
+    "file": "assets/quill.bubble-07b6409a.css",
+    "isEntry": true,
+    "src": "node_modules/quill/dist/quill.bubble.css"
+  },
+  "node_modules/quill/dist/quill.core.css": {
+    "file": "assets/quill.core-9f8bb811.css",
+    "isEntry": true,
+    "src": "node_modules/quill/dist/quill.core.css"
+  },
+  "node_modules/quill/dist/quill.snow.css": {
+    "file": "assets/quill.snow-cf9a4bd4.css",
+    "isEntry": true,
+    "src": "node_modules/quill/dist/quill.snow.css"
+  },
+  "node_modules/select2/dist/css/select2.min.css": {
+    "file": "assets/select2.min-627c9488.css",
+    "isEntry": true,
+    "src": "node_modules/select2/dist/css/select2.min.css"
+  },
+  "node_modules/select2/dist/js/select2.min.js?commonjs-entry": {
+    "file": "assets/select2.min-e61dabba.js",
+    "imports": [
+      "_jquery-85b43b21.js",
+      "__commonjsHelpers-de833af9.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/select2/dist/js/select2.min.js?commonjs-entry"
+  },
+  "node_modules/typeahead.js/dist/typeahead.bundle.js?commonjs-entry": {
+    "file": "assets/typeahead.bundle-1143c6fc.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/typeahead.js/dist/typeahead.bundle.js?commonjs-entry"
+  },
+  "node_modules/typeahead.js/dist/typeahead.bundle.min.js?commonjs-entry": {
+    "file": "assets/typeahead.bundle.min-350b7742.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/typeahead.js/dist/typeahead.bundle.min.js?commonjs-entry"
+  },
+  "public/images/bg-auth.jpg": {
+    "file": "assets/bg-auth-1ea249ee.jpg",
+    "src": "public/images/bg-auth.jpg"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-999550fa.woff",
+    "src": "resources/fonts/bootstrap-icons.woff"
+  },
+  "resources/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-cfe45b98.woff2",
+    "src": "resources/fonts/bootstrap-icons.woff2"
+  },
+  "resources/fonts/remixicon.eot": {
+    "file": "assets/remixicon-8101cff7.eot",
+    "src": "resources/fonts/remixicon.eot"
+  },
+  "resources/fonts/remixicon.svg": {
+    "file": "assets/remixicon-e34241fd.svg",
+    "src": "resources/fonts/remixicon.svg"
+  },
+  "resources/fonts/remixicon.ttf": {
+    "file": "assets/remixicon-a5661ad7.ttf",
+    "src": "resources/fonts/remixicon.ttf"
+  },
+  "resources/fonts/remixicon.woff": {
+    "file": "assets/remixicon-92c31fd6.woff",
+    "src": "resources/fonts/remixicon.woff"
+  },
+  "resources/fonts/remixicon.woff2": {
+    "file": "assets/remixicon-b6cfad87.woff2",
+    "src": "resources/fonts/remixicon.woff2"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-5e4d9ff4.js",
+    "imports": [
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/customs/appointments.js": {
+    "file": "assets/appointments-f5bc4b02.js",
+    "imports": [
+      "_id-be976a3c.js",
+      "__commonjsHelpers-de833af9.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/customs/appointments.js"
+  },
+  "resources/js/customs/business-partners.js": {
+    "file": "assets/business-partners-5df898c5.js",
+    "isEntry": true,
+    "src": "resources/js/customs/business-partners.js"
+  },
+  "resources/js/customs/clinics.js": {
+    "file": "assets/clinics-7d2e3f29.js",
+    "isEntry": true,
+    "src": "resources/js/customs/clinics.js"
+  },
+  "resources/js/customs/dashboard.js": {
+    "file": "assets/dashboard-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/js/customs/dashboard.js"
+  },
+  "resources/js/customs/datatable.js": {
+    "file": "assets/datatable-27a98621.js",
+    "imports": [
+      "_jquery.dataTables-dba82043.js",
+      "_dataTables.bootstrap5-31b0ec69.js",
+      "_jquery-30b01ada.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/customs/datatable.js"
+  },
+  "resources/js/customs/patient-check-form.js": {
+    "file": "assets/patient-check-form-444cd3a8.js",
+    "isEntry": true,
+    "src": "resources/js/customs/patient-check-form.js"
+  },
+  "resources/js/customs/qrcarolus.js": {
+    "file": "assets/qrcarolus-0a5038cc.js",
+    "isEntry": true,
+    "src": "resources/js/customs/qrcarolus.js"
+  },
+  "resources/js/customs/schedule-dates.js": {
+    "file": "assets/schedule-dates-1dcd656e.js",
+    "imports": [
+      "_id-be976a3c.js",
+      "__commonjsHelpers-de833af9.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/customs/schedule-dates.js"
+  },
+  "resources/js/customs/schedules.js": {
+    "file": "assets/schedules-28fc847f.js",
+    "imports": [
+      "_id-be976a3c.js",
+      "__commonjsHelpers-de833af9.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/customs/schedules.js"
+  },
+  "resources/js/customs/users.js": {
+    "file": "assets/users-379d527f.js",
+    "isEntry": true,
+    "src": "resources/js/customs/users.js"
+  },
+  "resources/js/head.js": {
+    "file": "assets/head-24154829.js",
+    "imports": [
+      "_jquery-30b01ada.js",
+      "__commonjsHelpers-de833af9.js",
+      "_jquery-85b43b21.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/head.js"
+  },
+  "resources/js/layout.js": {
+    "file": "assets/layout-b8b7d592.js",
+    "isEntry": true,
+    "src": "resources/js/layout.js"
+  },
+  "resources/scss/app.scss": {
+    "file": "assets/app-8813c3b2.css",
+    "isEntry": true,
+    "src": "resources/scss/app.scss"
+  },
+  "resources/scss/icons.scss": {
+    "file": "assets/icons-9255a63b.css",
+    "isEntry": true,
+    "src": "resources/scss/icons.scss"
+  }
+}

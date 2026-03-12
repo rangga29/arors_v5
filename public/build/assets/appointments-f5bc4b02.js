@@ -1,0 +1,1 @@
+import{i as l}from"./id-be976a3c.js";import"./_commonjsHelpers-de833af9.js";$(document).ready(function(){let t=$("#appointment-date"),a=t.data("schedule-date-first"),e=t.data("schedule-date-last"),d=t.data("today");t.flatpickr({altInput:!0,altFormat:"j F Y",dateFormat:"Y-m-d",defaultDate:d,locale:l.Indonesian,minDate:a,maxDate:e})});

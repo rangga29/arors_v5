@@ -1,0 +1,3 @@
+sc_doctor_code,sc_clinic_code,sc_operational_time_code,ap_ucode,ap_no,ap_token,ap_queue,ap_type,ap_registration_time,ap_appointment_time,bap_norm,bap_name,bap_birthday,bap_gender,bap_phone,bap_bpjs,bap_ppk1,needs_api,visit_type_code
+DOC001,KLI013,OT001,AP-00001,OPA-00001,ABC123,1,BPJS,07:30,08:00,01-23-45-67,NAMA PASIEN,01/01/1990,Laki-Laki,081234567890,0001234567890,PPK1 NAMA,0,
+DOC001,FIS001,OT001,,,,,,,,01-23-45-68,NAMA PASIEN FISIO,15/05/1985,Perempuan,081234567891,0009876543210,PPK1 NAMA,1,VT09

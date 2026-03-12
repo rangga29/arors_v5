@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="title" content="Registrasi Online Rumah Sakit Cahya Kawaluyan Sunday Clinic">
+    <meta name="description" content="Website Resmi Registrasi Online Rumah Sakit Cahya Kawaluyan Sunday Clinic">
+    <meta name="keywords"
+        content="rsck, cahya kawaluyan, rumah sakit, rs cahya kawaluyan, registrasi online, registrasi rsck, registrasi online rsck, registrasi sunday clinic">
+    <meta name="author" content="RS Cahya Kawaluyan">
+
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Registrasi Online Rumah Sakit Cahya Kawaluyan Sunday Clinic">
+    <meta property="og:description" content="Website Resmi Registrasi Online Rumah Sakit Cahya Kawaluyan Sunday Clinic">
+    <meta property="og:site_name" content="Registrasi Online RS Cahya Kawaluyan Sunday Clinic">
+    <meta property="og:url" content="{{ url()->current() }}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Registrasi Online Rumah Sakit Cahya Kawaluyan Sunday Clinic">
+    <meta name="twitter:description"
+        content="Website Resmi Registrasi Online Rumah Sakit Cahya Kawaluyan Sunday Clinic">
+
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="revisit-after" content="2 days" />
+    <meta name="author" content="RS Cahya Kawaluyan">
+    <meta name="expires" content="never" />
+    <link rel="canonical" href="{{ url()->current() }}" />
+
+    <link rel="shortcut icon" href="{{ asset('images/rsck_trans.png') }}">
+
+    <title>Registrasi Online Rumah Sakit Cahya Kawaluyan - Sunday Clinic</title>
+
+    @vite(['resources/scss/app.scss', 'resources/scss/icons.scss', 'resources/js/head.js'])
+</head>
+
+<body class="bg-home">
+    <div class="container home-container">
+        {{-- Header --}}
+        <header class="home-header">
+            <a href="/">
+                <img src="{{ asset('images/logo_rsck_new_resize.png') }}" alt="RS Cahya Kawaluyan" class="logo-image">
+            </a>
+            <h1>Registrasi Sunday Clinic</h1>
+        </header>
+
+        <main>
+            {{-- Section: Pilihan Registrasi --}}
+            <div class="home-section">
+                <div class="home-section-title">
+                    <i class="ri-calendar-event-line"></i> Pilihan Registrasi
+                </div>
+                <div class="home-btn-group">
+                    <a href="{{ route('sunday-clinic.old-patient') }}" class="home-btn home-btn-one">
+                        <i class="ri-user-line"></i>
+                        <span>Sudah Memiliki Nomor Rekam Medis</span>
+                    </a>
+                    <a href="{{ route('sunday-clinic.new-patient') }}" class="home-btn home-btn-five">
+                        <i class="ri-user-add-line"></i>
+                        <span>Belum Memiliki Nomor Rekam Medis</span>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="home-footer">
+            <p>&copy; {{ date('Y') }} RS Cahya Kawaluyan. All rights reserved.</p>
+        </footer>
+    </div>
+    @vite(['resources/js/app.js', 'resources/js/layout.js'])
+</body>
+
+</html>

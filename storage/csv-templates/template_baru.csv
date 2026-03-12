@@ -1,0 +1,2 @@
+sc_doctor_code,sc_clinic_code,sc_operational_time_code,ap_ucode,ap_no,ap_token,ap_queue,ap_type,ap_registration_time,ap_appointment_time,nap_name,nap_birthday,nap_phone,nap_ssn,nap_gender,nap_address,nap_email,nap_business_partner_code,nap_business_partner_name,needs_api,visit_type_code
+DOC001,KLI001,OT001,AP-00001,OPA-00001,ABC123,1,BARU,07:30,08:00,NAMA PASIEN BARU,01/01/1990,081234567890,3201234567890001,Laki-Laki,JL. CONTOH NO 1,email@example.com,,,0,
