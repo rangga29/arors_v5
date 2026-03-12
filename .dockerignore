@@ -1,0 +1,24 @@
+# Dependencies (di-install di dalam container)
+node_modules
+vendor
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.idea
+.vscode
+.fleet
+
+# Docker (jangan recursive copy)
+docker/mysql/data
+
+# Misc
+.env
+.env.backup
+.env.production
+*.log
+error_log
+storage/logs/*

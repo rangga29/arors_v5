@@ -1,0 +1,5 @@
+-- ============================================
+-- ARORS V5 Database Init
+-- ============================================
+-- File ini akan di-replace oleh db-export.sh
+-- saat pertama kali, jalankan: php artisan migrate --seed
