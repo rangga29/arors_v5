@@ -12,7 +12,7 @@
 
 set -e
 
-PROJECTS_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+PROJECTS_DIR="$(cd "$(dirname "$0")" && pwd)"
 ARORS_DIR="$PROJECTS_DIR/arors_v5"
 APM_DIR="$PROJECTS_DIR/apm_rehab_v1"
 
